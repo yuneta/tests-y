@@ -118,8 +118,7 @@ static inline void test(int argc, char *argv[], int flags, uint64_t cnt)
     struct timespec st, et, dt;
 
     /*------------------------------------------------*
-     *  To trace memory you also need
-     *  link with ghelpersd library
+     *  To trace memory
      *------------------------------------------------*/
 //#ifdef DEBUG
     static uint32_t mem_list[] = {0};
