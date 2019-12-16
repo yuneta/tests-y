@@ -71,9 +71,7 @@ TARGET_LINK_LIBRARIES(pepons
     /yuneta/development/output/lib/libssl.a
     /yuneta/development/output/lib/libcrypto.a
 
-    dl
-
-    pthread     # used by libuv
+    pthread dl  # used by libuv
     lzma        # used by libunwind
 
 )
@@ -91,9 +89,7 @@ TARGET_LINK_LIBRARIES(pepons
     /yuneta/development/output/lib/libssl.a
     /yuneta/development/output/lib/libcrypto.a
 
-    dl
-
-    pthread     # used by libuv
+    pthread dl  # used by libuv
     lzma        # used by libunwind
 )
 endif(CMAKE_BUILD_TYPE MATCHES Debug)
