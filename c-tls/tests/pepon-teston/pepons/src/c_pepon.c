@@ -292,6 +292,9 @@ PRIVATE int ac_timeout(hgobj gobj, const char *event, json_t *kw, hgobj src)
  ***************************************************************************/
 PRIVATE int ac_stopped(hgobj gobj, const char *event, json_t *kw, hgobj src)
 {
+    if(gobj_is_volatil(src)) {
+        gobj_destroy(src);
+    }
     KW_DECREF(kw);
     return 0;
 }

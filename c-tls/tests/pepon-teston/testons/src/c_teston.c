@@ -118,8 +118,6 @@ PRIVATE void mt_create(hgobj gobj)
 //         ytls_shutdown(__ytls__);
 //     }
 
-
-
     /*
      *  Do copy of heavy used parameters, for quick access.
      *  HACK The writable attributes must be repeated in mt_writing method.
@@ -249,13 +247,14 @@ PRIVATE int ac_on_open(hgobj gobj, const char *event, json_t *kw, hgobj src)
 {
     PRIVATE_DATA *priv = gobj_priv_data(gobj);
 
-    GBUFFER *gbuf = gbuf_create(1024, 1024, 0, 0);
-    gbuf_printf(gbuf, "Holaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
-
-    json_t *kw_send = json_pack("{s:I}",
-        "gbuffer", (json_int_t)(size_t)gbuf
-    );
-    gobj_send_event(priv->gobj_output_side, "EV_SEND_MESSAGE", kw_send, gobj);
+    set_timeout(priv->timer, 5*1000);
+//     GBUFFER *gbuf = gbuf_create(1024, 1024, 0, 0);
+//     gbuf_printf(gbuf, "Holaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
+//
+//     json_t *kw_send = json_pack("{s:I}",
+//         "gbuffer", (json_int_t)(size_t)gbuf
+//     );
+//     gobj_send_event(priv->gobj_output_side, "EV_SEND_MESSAGE", kw_send, gobj);
 
     KW_DECREF(kw);
     return 0;
@@ -285,14 +284,14 @@ PRIVATE int ac_on_message(hgobj gobj, const char *event, json_t *kw, hgobj src)
         log_debug_gbuf(LOG_DUMP_INPUT, gbuf, "%s <== %s", gobj_short_name(gobj), gobj_short_name(priv->gobj_output_side));
     }
 
-    gbuf_incref(gbuf);
-    json_t *kw_send = json_pack("{s:I}",
-        "gbuffer", (json_int_t)(size_t)gbuf
-    );
-    gobj_send_event(priv->gobj_output_side, "EV_SEND_MESSAGE", kw_send, gobj);
-
-    (*priv->ptxMsgs)++;
-    gobj_incr_qs(QS_TXMSGS, 1);
+//     gbuf_incref(gbuf);
+//     json_t *kw_send = json_pack("{s:I}",
+//         "gbuffer", (json_int_t)(size_t)gbuf
+//     );
+//     gobj_send_event(priv->gobj_output_side, "EV_SEND_MESSAGE", kw_send, gobj);
+//
+//     (*priv->ptxMsgs)++;
+//     gobj_incr_qs(QS_TXMSGS, 1);
 
     KW_DECREF(kw);
 
@@ -304,9 +303,22 @@ PRIVATE int ac_on_message(hgobj gobj, const char *event, json_t *kw, hgobj src)
  ***************************************************************************/
 PRIVATE int ac_timeout(hgobj gobj, const char *event, json_t *kw, hgobj src)
 {
-//     if(gobj_trace_level(gobj) & TRACE_MESSAGES) {
-//         log_debug_printf("", "sample");
-//     }
+    PRIVATE_DATA *priv = gobj_priv_data(gobj);
+
+    GBUFFER *gbuf = gbuf_create(1024, 1024, 0, 0);
+    gbuf_printf(gbuf, "Holaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
+
+    json_t *kw_send = json_pack("{s:I}",
+        "gbuffer", (json_int_t)(size_t)gbuf
+    );
+    gobj_send_event(priv->gobj_output_side, "EV_SEND_MESSAGE", kw_send, gobj);
+
+    static int uno = 0;
+    if(!uno) {
+        set_timeout(priv->timer, 5*1000);
+        uno = 1;
+    }
+
     KW_DECREF(kw);
     return 0;
 }
@@ -317,6 +329,9 @@ PRIVATE int ac_timeout(hgobj gobj, const char *event, json_t *kw, hgobj src)
  ***************************************************************************/
 PRIVATE int ac_stopped(hgobj gobj, const char *event, json_t *kw, hgobj src)
 {
+    if(gobj_is_volatil(src)) {
+        gobj_destroy(src);
+    }
     KW_DECREF(kw);
     return 0;
 }

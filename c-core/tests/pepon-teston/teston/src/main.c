@@ -100,7 +100,7 @@ PRIVATE char variable_config[]= "\
                             'zchilds': [                            \n\
                                 {                                   \n\
                                     'name': 'output',               \n\
-                                    'gclass': 'Connexs',            \n\
+                                    'gclass': 'Connex',             \n\
                                     'kw': {                         \n\
                                         'urls':[                    \n\
                                             'tcp://127.0.0.1:7777'  \n\

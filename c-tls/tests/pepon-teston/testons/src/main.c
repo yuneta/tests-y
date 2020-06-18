@@ -69,7 +69,7 @@ PRIVATE char variable_config[]= "\
             'Tcp0': ['connections'],                                \n\
             'TcpS0': ['listen', 'not-accepted', 'accepted'],        \n\
             'Tcp1': ['connections', 'traffic'],                     \n\
-            'TcpS1': ['listen', 'not-accepted', 'accepted']      \n\
+            'TcpS1': ['listen', 'not-accepted', 'accepted']         \n\
         }                                                           \n\
     },                                                              \n\
     'global': {                                                     \n\

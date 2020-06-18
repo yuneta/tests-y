@@ -69,7 +69,7 @@ PRIVATE char variable_config[]= "\
             'Tcp0': ['connections'],                                \n\
             'TcpS0': ['listen', 'not-accepted', 'accepted'],        \n\
             'Tcp1': ['connections', 'traffic'],                     \n\
-            'TcpS1': ['listen', 'not-accepted', 'accepted']      \n\
+            'TcpS1': ['listen', 'not-accepted', 'accepted']         \n\
         }                                                           \n\
     },                                                              \n\
     'global': {                                                     \n\
@@ -106,6 +106,8 @@ PRIVATE char variable_config[]= "\
                     'kw': {                                         \n\
                         'crypto': {                                 \n\
                             'library': 'openssl',                   \n\
+'ssl_certificate': '/yuneta/development/yuneta/^yuneta/tests-y/certs/yuneta.crt',\n\
+'ssl_certificate_key': '/yuneta/development/yuneta/^yuneta/tests-y/certs/yuneta.key',\n\
                             'trace': true                           \n\
                         },                                          \n\
                         'url': '(^^__input_url__^^)',               \n\
