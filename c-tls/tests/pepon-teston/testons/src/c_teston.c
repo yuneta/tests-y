@@ -314,9 +314,9 @@ PRIVATE int ac_timeout(hgobj gobj, const char *event, json_t *kw, hgobj src)
     gobj_send_event(priv->gobj_output_side, "EV_SEND_MESSAGE", kw_send, gobj);
 
     static int uno = 0;
-    if(!uno) {
+    if(uno < 2) {
         set_timeout(priv->timer, 5*1000);
-        uno = 1;
+        uno++;
     }
 
     KW_DECREF(kw);

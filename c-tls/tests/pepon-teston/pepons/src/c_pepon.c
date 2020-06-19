@@ -260,14 +260,14 @@ PRIVATE int ac_on_message(hgobj gobj, const char *event, json_t *kw, hgobj src)
         log_debug_gbuf(LOG_DUMP_INPUT, gbuf, "%s <== %s", gobj_short_name(gobj), gobj_short_name(priv->gobj_input_side));
     }
 
-    gbuf_incref(gbuf);
-    json_t *kw_send = json_pack("{s:I}",
-        "gbuffer", (json_int_t)(size_t)gbuf
-    );
-    gobj_send_event(priv->gobj_input_side, "EV_SEND_MESSAGE", kw_send, gobj);
-
-    (*priv->ptxMsgs)++;
-    gobj_incr_qs(QS_TXMSGS, 1);
+//     gbuf_incref(gbuf);
+//     json_t *kw_send = json_pack("{s:I}",
+//         "gbuffer", (json_int_t)(size_t)gbuf
+//     );
+//     gobj_send_event(priv->gobj_input_side, "EV_SEND_MESSAGE", kw_send, gobj);
+//
+//     (*priv->ptxMsgs)++;
+//     gobj_incr_qs(QS_TXMSGS, 1);
 
     KW_DECREF(kw);
 
