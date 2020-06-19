@@ -68,7 +68,7 @@ PRIVATE char variable_config[]= "\
         'trace_levels': {                                           \n\
             'Tcp0': ['connections'],                                \n\
             'TcpS0': ['listen', 'not-accepted', 'accepted'],        \n\
-            'Tcp1': ['connections', 'traffic'],                     \n\
+            'Tcp1': ['connections'],                     \n\
             'TcpS1': ['listen', 'not-accepted', 'accepted']         \n\
         }                                                           \n\
     },                                                              \n\
@@ -106,7 +106,7 @@ PRIVATE char variable_config[]= "\
                                     'kw': {                         \n\
                                         'crypto': {                 \n\
                                             'library': 'openssl',   \n\
-                                            'trace': true           \n\
+                                            'trace': false           \n\
                                         },                          \n\
                                         'urls':[                    \n\
                                             'tcps://127.0.0.1:7778' \n\
@@ -165,15 +165,15 @@ int main(int argc, char *argv[])
 // Samples
 //     gobj_set_gclass_trace(GCLASS_IEVENT_CLI, "ievents", TRUE);
 //     gobj_set_gclass_trace(GCLASS_IEVENT_SRV, "ievents", TRUE);
-    gobj_set_gclass_trace(GCLASS_TESTON, "messages", TRUE);
+//     gobj_set_gclass_trace(GCLASS_TESTON, "messages", TRUE);
 
 //     gobj_set_gobj_trace(0, "create_delete", TRUE, 0);
 //     gobj_set_gobj_trace(0, "create_delete2", TRUE, 0);
 //     gobj_set_gobj_trace(0, "start_stop", TRUE, 0);
 //     gobj_set_gobj_trace(0, "subscriptions", TRUE, 0);
-    gobj_set_gobj_trace(0, "machine", TRUE, 0);
+//     gobj_set_gobj_trace(0, "machine", TRUE, 0);
 //     gobj_set_gobj_trace(0, "ev_kw", TRUE, 0);
-    gobj_set_gobj_trace(0, "libuv", TRUE, 0);
+//     gobj_set_gobj_trace(0, "libuv", TRUE, 0);
 
     /*------------------------------------------------*
      *          Start yuneta
