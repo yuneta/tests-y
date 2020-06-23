@@ -68,7 +68,7 @@ PRIVATE char variable_config[]= "\
         'trace_levels': {                                           \n\
             'Tcp0': ['connections'],                                \n\
             'TcpS0': ['listen', 'not-accepted', 'accepted'],        \n\
-            'Tcp1': ['connections'],                     \n\
+            'Tcp1': ['connections'],                                \n\
             'TcpS1': ['listen', 'not-accepted', 'accepted']         \n\
         }                                                           \n\
     },                                                              \n\
