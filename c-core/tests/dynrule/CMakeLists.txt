@@ -6,6 +6,12 @@ cmake_minimum_required(VERSION 2.8)
 include(CheckIncludeFiles)
 include(CheckSymbolExists)
 
+set(CMAKE_INSTALL_PREFIX /yuneta/development/yuneta/^yuneta/tests-y/output)
+
+set(INC_DEST_DIR ${CMAKE_INSTALL_PREFIX}/include)
+set(LIB_DEST_DIR ${CMAKE_INSTALL_PREFIX}/lib)
+set(BIN_DEST_DIR ${CMAKE_INSTALL_PREFIX}/yunos)
+
 set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -Wall -std=c99")
 
 if(CMAKE_BUILD_TYPE MATCHES Debug)

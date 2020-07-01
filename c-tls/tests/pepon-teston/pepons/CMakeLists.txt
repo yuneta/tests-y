@@ -36,7 +36,6 @@ else(HAVE_REGEX_H)
 endif(HAVE_REGEX_H)
 
 include_directories(BEFORE /yuneta/development/output/include)
-set(CMAKE_LIBRARY_PATH ${CMAKE_LIBRARY_PATH} /yuneta/development/output/lib)
 
 ##############################################
 #   Source
