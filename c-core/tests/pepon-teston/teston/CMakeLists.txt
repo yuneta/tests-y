@@ -67,7 +67,7 @@ TARGET_LINK_LIBRARIES(teston
 
     pthread dl  # used by libuv
     lzma        # used by libunwind
-
+    uuid
 )
 
 ##############################################

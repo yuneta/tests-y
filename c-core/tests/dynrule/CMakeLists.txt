@@ -56,6 +56,7 @@ TARGET_LINK_LIBRARIES(test_dynrule
     /yuneta/development/output/lib/libunwind.a
 
     rt pthread dl lzma
+    uuid
 )
 
 ##############################################
