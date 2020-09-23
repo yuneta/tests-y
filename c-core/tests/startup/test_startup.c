@@ -17,7 +17,7 @@
 #define APP_NAME        "test_startup"
 #define APP_DOC         "Test"
 
-#define APP_VERSION     "4.2.16"
+#define APP_VERSION     "4.2.17"
 #define APP_SUPPORT     "<niyamaka at yuneta.io>"
 #define APP_DATETIME    __DATE__ " " __TIME__
 
