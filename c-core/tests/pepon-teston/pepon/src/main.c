@@ -17,7 +17,7 @@
 #define APP_NAME        "pepon"
 #define APP_DOC         "Pepon, yuno server de pruebas"
 
-#define APP_VERSION     "4.2.19"
+#define APP_VERSION     "4.2.20"
 #define APP_SUPPORT     "<niyamaka@yuneta.io>"
 #define APP_DATETIME    __DATE__ " " __TIME__
 
