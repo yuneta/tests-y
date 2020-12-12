@@ -63,14 +63,19 @@ TARGET_LINK_LIBRARIES(pepons
     /yuneta/development/output/lib/libytls.a
     /yuneta/development/output/lib/libghelpers.a
     /yuneta/development/output/lib/libuv.a
+    /yuneta/development/output/lib/liboauth2.a
+    /yuneta/development/output/lib/libcjose.a
     /yuneta/development/output/lib/libjansson.a
     /yuneta/development/output/lib/libunwind.a
     /yuneta/development/output/lib/libpcre2-8.a
+    /yuneta/development/output/lib/libcurl.a
     /yuneta/development/output/lib/libssl.a
     /yuneta/development/output/lib/libcrypto.a
 
     pthread dl  # used by libuv
     lzma        # used by libunwind
+
+    z rt m
     uuid
 )
 
