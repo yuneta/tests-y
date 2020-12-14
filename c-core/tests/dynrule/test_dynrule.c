@@ -131,6 +131,7 @@ int main(int argc, char *argv[])
             "'yuno' dict NOT FOUND in json config"
         );
     }
+    const char *realm_domain  = kw_get_str(jn_yuno, "realm_domain", "", 0);
     const char *realm_name  = kw_get_str(jn_yuno, "realm_name", "", 0);
     const char *yuno_role  = kw_get_str(jn_yuno, "yuno_role", 0, 0);
     const char *yuno_name  = kw_get_str(jn_yuno, "yuno_name", "", 0);
@@ -143,6 +144,8 @@ int main(int argc, char *argv[])
     json_t *jn_global = kw_get_dict(__jn_config__, "global", 0, 0);
     gobj_start_up(
         jn_global,
+        0,
+        0,
         0,
         0,
         0,
@@ -164,6 +167,7 @@ int main(int argc, char *argv[])
      *---------------------------------*/
     json_incref(jn_yuno);
     hgobj __yuno_gobj__ = gobj_yuno_factory(
+        realm_domain,
         realm_name,
         yuno_name,
         yuno_alias,
