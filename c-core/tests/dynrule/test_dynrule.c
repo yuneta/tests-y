@@ -152,6 +152,8 @@ int main(int argc, char *argv[])
         0,
         0,
         0,
+        0,
+        0,
         0
     );
     yuneta_register_c_core();
@@ -168,6 +170,7 @@ int main(int argc, char *argv[])
     json_incref(jn_yuno);
     hgobj __yuno_gobj__ = gobj_yuno_factory(
         realm_domain,
+        realm_name,
         realm_name,
         yuno_name,
         yuno_alias,
