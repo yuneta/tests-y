@@ -154,6 +154,7 @@ int main(int argc, char *argv[])
         0,
         0,
         0,
+        0,
         0
     );
     yuneta_register_c_core();
