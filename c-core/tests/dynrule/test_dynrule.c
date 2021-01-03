@@ -138,7 +138,7 @@ int main(int argc, char *argv[])
     const char *realm_env  = kw_get_str(jn_yuno, "realm_env", "", 0);
     const char *yuno_role  = kw_get_str(jn_yuno, "yuno_role", 0, 0);
     const char *yuno_name  = kw_get_str(jn_yuno, "yuno_name", "", 0);
-    const char *yuno_alias  = kw_get_str(jn_yuno, "yuno_alias", "", 0);
+    const char *yuno_tag  = kw_get_str(jn_yuno, "yuno_tag", "", 0);
 
     /*------------------------------------------------*
      *  Init ginsfsm and yuneta
@@ -177,7 +177,7 @@ int main(int argc, char *argv[])
         realm_name,
         realm_env,
         yuno_name,
-        yuno_alias,
+        yuno_tag,
         jn_yuno
     );
     if(!__yuno_gobj__) {
