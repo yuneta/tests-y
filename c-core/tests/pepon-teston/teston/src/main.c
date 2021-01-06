@@ -17,7 +17,7 @@
 #define APP_NAME        "teston"
 #define APP_DOC         "Teston, yuno client de pruebas"
 
-#define APP_VERSION     "4.5.0"
+#define APP_VERSION     "4.6.0"
 #define APP_SUPPORT     "<niyamaka@yuneta.io>"
 #define APP_DATETIME    __DATE__ " " __TIME__
 
