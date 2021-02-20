@@ -1,0 +1,457 @@
+# command = nodes SIN options
+
+{
+    "command": "command-yuno id=1911 service=treedb_authzs command=nodes topic_name=users",
+    "_kw": {},
+    "ignore_fail": true,
+    "filter": ["result", "comment", "data"],
+    "without_metadata": true,
+    "without_private": true,
+    "response":
+        {
+            "result": 0,
+            "comment": "4 nodes",
+            "data": [
+                {
+                    "id": "cochoa@mulesol.es",
+                    "roles": [
+                        {
+                            "id": "manage-controlcenter",
+                            "topic_name": "roles",
+                            "hook_name": "users"
+                        },
+                        {
+                            "id": "manage-authzs",
+                            "topic_name": "roles",
+                            "hook_name": "users"
+                        },
+                        {
+                            "id": "owner",
+                            "topic_name": "roles",
+                            "hook_name": "users"
+                        }
+                    ],
+                    "disabled": false,
+                    "properties": {},
+                    "_geometry": {}
+                },
+                {
+                    "id": "ginsmar@mulesol.es",
+                    "roles": [
+                        {
+                            "id": "manage-controlcenter",
+                            "topic_name": "roles",
+                            "hook_name": "users"
+                        },
+                        {
+                            "id": "manage-authzs",
+                            "topic_name": "roles",
+                            "hook_name": "users"
+                        },
+                        {
+                            "id": "owner",
+                            "topic_name": "roles",
+                            "hook_name": "users"
+                        }
+                    ],
+                    "disabled": false,
+                    "properties": {},
+                    "_geometry": {}
+                },
+                {
+                    "id": "yuneta",
+                    "roles": [
+                        {
+                            "id": "root",
+                            "topic_name": "roles",
+                            "hook_name": "users"
+                        },
+                        {
+                            "id": "owner",
+                            "topic_name": "roles",
+                            "hook_name": "users"
+                        }
+                    ],
+                    "disabled": false,
+                    "properties": {},
+                    "_geometry": {}
+                },
+                {
+                    "id": "carlos1@mulesol.es",
+                    "roles": [],
+                    "disabled": false,
+                    "properties": {},
+                    "_geometry": {}
+                }
+            ]
+        }
+}
+
+# command = nodes CON filter
+
+{
+    "command": "command-yuno id=1911 service=treedb_authzs command=nodes topic_name=users filter={\"id\":\"cochoa@mulesol.es\"}",
+    "_kw": {},
+    "ignore_fail": true,
+    "filter": ["result", "comment", "data"],
+    "without_metadata": true,
+    "without_private": true,
+    "response":
+        {
+            "result": 0,
+            "comment": "1 nodes",
+            "data": [
+                {
+                    "id": "cochoa@mulesol.es",
+                    "roles": [
+                        {
+                            "id": "manage-controlcenter",
+                            "topic_name": "roles",
+                            "hook_name": "users"
+                        },
+                        {
+                            "id": "manage-authzs",
+                            "topic_name": "roles",
+                            "hook_name": "users"
+                        },
+                        {
+                            "id": "owner",
+                            "topic_name": "roles",
+                            "hook_name": "users"
+                        }
+                    ],
+                    "disabled": false,
+                    "properties": {},
+                    "_geometry": {}
+                }
+            ]
+        }
+}
+
+# command = nodes CON options:refs y filter
+
+{
+    "command": "command-yuno id=1911 service=treedb_authzs command=nodes topic_name=users filter={\"id\":\"cochoa@mulesol.es\"} options={\"refs\":true}",
+    "_kw": {},
+    "ignore_fail": true,
+    "filter": ["result", "comment", "data"],
+    "without_metadata": true,
+    "without_private": true,
+    "response":
+        {
+            "result": 0,
+            "comment": "1 nodes",
+            "data": [
+                {
+                    "id": "cochoa@mulesol.es",
+                    "roles": [
+                        "roles^manage-controlcenter^users",
+                        "roles^manage-authzs^users",
+                        "roles^owner^users"
+                    ],
+                    "disabled": false,
+                    "properties": {},
+                    "_geometry": {
+                        "x": 200,
+                        "y": 470,
+                        "width": 170,
+                        "height": 100,
+                        "__origin__": "me-7c4f6b1c-5e72-442f-97e7-e27829da5898"
+                    }
+                }
+            ]
+        }
+}
+
+# command = nodes CON options:hook_refs y filter
+
+{
+    "command": "command-yuno id=1911 service=treedb_authzs command=nodes topic_name=users filter={\"id\":\"cochoa@mulesol.es\"} options={\"hook_refs\":true}",
+    "_kw": {},
+    "ignore_fail": true,
+    "filter": ["result", "comment", "data"],
+    "without_metadata": true,
+    "without_private": true,
+    "response":
+        {
+            "result": 0,
+            "comment": "1 nodes",
+            "data": [
+                {
+                    "id": "cochoa@mulesol.es",
+                    "roles": [
+                        {
+                            "id": "manage-controlcenter",
+                            "topic_name": "roles",
+                            "hook_name": "users"
+                        },
+                        {
+                            "id": "manage-authzs",
+                            "topic_name": "roles",
+                            "hook_name": "users"
+                        },
+                        {
+                            "id": "owner",
+                            "topic_name": "roles",
+                            "hook_name": "users"
+                        }
+                    ],
+                    "disabled": false,
+                    "properties": {},
+                    "_geometry": {
+                        "x": 200,
+                        "y": 470,
+                        "width": 170,
+                        "height": 100,
+                        "__origin__": "me-7c4f6b1c-5e72-442f-97e7-e27829da5898"
+                    }
+                }
+            ]
+        }
+}
+
+# command = nodes CON options:fkey_refs y filter
+
+{
+    "command": "command-yuno id=1911 service=treedb_authzs command=nodes topic_name=users filter={\"id\":\"cochoa@mulesol.es\"} options={\"fkey_refs\":true}",
+    "_kw": {},
+    "ignore_fail": true,
+    "filter": ["result", "comment", "data"],
+    "without_metadata": true,
+    "without_private": true,
+    "response":
+        {
+            "result": 0,
+            "comment": "1 nodes",
+            "data": [
+                {
+                    "id": "cochoa@mulesol.es",
+                    "roles": [
+                        "roles^manage-controlcenter^users",
+                        "roles^manage-authzs^users",
+                        "roles^owner^users"
+                    ],
+                    "disabled": false,
+                    "properties": {},
+                    "_geometry": {
+                        "x": 200,
+                        "y": 470,
+                        "width": 170,
+                        "height": 100,
+                        "__origin__": "me-7c4f6b1c-5e72-442f-97e7-e27829da5898"
+                    }
+                }
+            ]
+        }
+}
+
+# command = nodes CON options:only_id y filter
+
+{
+    "command": "command-yuno id=1911 service=treedb_authzs command=nodes topic_name=users filter={\"id\":\"cochoa@mulesol.es\"} options={\"only_id\":true}",
+    "_kw": {},
+    "ignore_fail": true,
+    "filter": ["result", "comment", "data"],
+    "without_metadata": true,
+    "without_private": true,
+    "response":
+        {
+            "result": 0,
+            "comment": "1 nodes",
+            "data": [
+                {
+                    "id": "cochoa@mulesol.es",
+                    "roles": [
+                        "manage-controlcenter",
+                        "manage-authzs",
+                        "owner"
+                    ],
+                    "disabled": false,
+                    "properties": {},
+                    "_geometry": {
+                        "x": 200,
+                        "y": 470,
+                        "width": 170,
+                        "height": 100,
+                        "__origin__": "me-7c4f6b1c-5e72-442f-97e7-e27829da5898"
+                    }
+                }
+            ]
+        }
+}
+
+# command = nodes CON options:hook_only_id y filter
+
+{
+    "command": "command-yuno id=1911 service=treedb_authzs command=nodes topic_name=users filter={\"id\":\"cochoa@mulesol.es\"} options={\"hook_only_id\":true}",
+    "_kw": {},
+    "ignore_fail": true,
+    "filter": ["result", "comment", "data"],
+    "without_metadata": true,
+    "without_private": true,
+    "response":
+        {
+            "result": 0,
+            "comment": "1 nodes",
+            "data": [
+                {
+                    "id": "cochoa@mulesol.es",
+                    "roles": [
+                        {
+                            "id": "manage-controlcenter",
+                            "topic_name": "roles",
+                            "hook_name": "users"
+                        },
+                        {
+                            "id": "manage-authzs",
+                            "topic_name": "roles",
+                            "hook_name": "users"
+                        },
+                        {
+                            "id": "owner",
+                            "topic_name": "roles",
+                            "hook_name": "users"
+                        }
+                    ],
+                    "disabled": false,
+                    "properties": {},
+                    "_geometry": {
+                        "x": 200,
+                        "y": 470,
+                        "width": 170,
+                        "height": 100,
+                        "__origin__": "me-7c4f6b1c-5e72-442f-97e7-e27829da5898"
+                    }
+                }
+            ]
+        }
+}
+
+# command = nodes CON options:hook_only_id y filter
+
+{
+    "command": "command-yuno id=1911 service=treedb_authzs command=nodes topic_name=users filter={\"id\":\"cochoa@mulesol.es\"} options={\"hook_only_id\":true}",
+    "_kw": {},
+    "ignore_fail": true,
+    "filter": ["result", "comment", "data"],
+    "without_metadata": true,
+    "without_private": true,
+    "response":
+        {
+            "result": 0,
+            "comment": "1 nodes",
+            "data": [
+                {
+                    "id": "cochoa@mulesol.es",
+                    "roles": [
+                        {
+                            "id": "manage-controlcenter",
+                            "topic_name": "roles",
+                            "hook_name": "users"
+                        },
+                        {
+                            "id": "manage-authzs",
+                            "topic_name": "roles",
+                            "hook_name": "users"
+                        },
+                        {
+                            "id": "owner",
+                            "topic_name": "roles",
+                            "hook_name": "users"
+                        }
+                    ],
+                    "disabled": false,
+                    "properties": {},
+                    "_geometry": {
+                        "x": 200,
+                        "y": 470,
+                        "width": 170,
+                        "height": 100,
+                        "__origin__": "me-7c4f6b1c-5e72-442f-97e7-e27829da5898"
+                    }
+                }
+            ]
+        }
+}
+
+# command = nodes CON options:fkey_only_id y filter
+
+{
+    "command": "command-yuno id=1911 service=treedb_authzs command=nodes topic_name=users filter={\"id\":\"cochoa@mulesol.es\"} options={\"fkey_only_id\":true}",
+    "_kw": {},
+    "ignore_fail": true,
+    "filter": ["result", "comment", "data"],
+    "without_metadata": true,
+    "without_private": true,
+    "response":
+        {
+            "result": 0,
+            "comment": "1 nodes",
+            "data": [
+                {
+                    "id": "cochoa@mulesol.es",
+                    "roles": [
+                        "manage-controlcenter",
+                        "manage-authzs",
+                        "owner"
+                    ],
+                    "disabled": false,
+                    "properties": {},
+                    "_geometry": {
+                        "x": 200,
+                        "y": 470,
+                        "width": 170,
+                        "height": 100,
+                        "__origin__": "me-7c4f6b1c-5e72-442f-97e7-e27829da5898"
+                    }
+                }
+            ]
+        }
+}
+
+# command = nodes CON options:list_dict y filter (NO HAY CAMBIO respecto a sin options
+
+{
+    "command": "command-yuno id=1911 service=treedb_authzs command=nodes topic_name=users filter={\"id\":\"cochoa@mulesol.es\"} options={\"list_dict\":true}",
+    "_kw": {},
+    "ignore_fail": true,
+    "filter": ["result", "comment", "data"],
+    "without_metadata": true,
+    "without_private": true,
+    "response":
+        {
+            "result": 0,
+            "comment": "1 nodes",
+            "data": [
+                {
+                    "id": "cochoa@mulesol.es",
+                    "roles": [
+                        {
+                            "id": "manage-controlcenter",
+                            "topic_name": "roles",
+                            "hook_name": "users"
+                        },
+                        {
+                            "id": "manage-authzs",
+                            "topic_name": "roles",
+                            "hook_name": "users"
+                        },
+                        {
+                            "id": "owner",
+                            "topic_name": "roles",
+                            "hook_name": "users"
+                        }
+                    ],
+                    "disabled": false,
+                    "properties": {},
+                    "_geometry": {
+                        "x": 200,
+                        "y": 470,
+                        "width": 170,
+                        "height": 100,
+                        "__origin__": "me-7c4f6b1c-5e72-442f-97e7-e27829da5898"
+                    }
+                }
+            ]
+        }
+}

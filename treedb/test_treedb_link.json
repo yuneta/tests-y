@@ -1,0 +1,51 @@
+# OJO LOS LINKS SE PUEDEN DUPLICAR, CREO UN USUARIO carlos3@mulesol.es PARA HACER EL ENLACE. LA PRIMERA VEZ OK, LAS SIGUIENTES VECES DARÁ ERROR
+
+{
+    "command": "command-yuno id=1911 service=treedb_authzs command=update-node topic_name=users record='{\"id\":\"carlos3@mulesol.es\"}' options='{\"create\":1}'",
+    "_kw": {},
+    "ignore_fail": true,
+    "filter": ["result", "comment", "data"],
+    "without_metadata": true,
+    "without_private": true,
+    "response":
+        {
+            "result": 0,
+            "comment": "Node update!",
+            "data": {
+                "id": "carlos3@mulesol.es",
+                "roles": [
+
+                ],
+                "disabled": false,
+                "properties": {},
+                "_geometry": {}
+            }
+        }
+}
+
+{
+    "command": "command-yuno id=1911 service=treedb_authzs command=link-nodes parent_ref=roles^root^users child_ref=users^carlos3@mulesol.es",
+    "_kw": {},
+    "ignore_fail": true,
+    "filter": ["result", "comment", "data"],
+    "without_metadata": true,
+    "without_private": true,
+    "response":
+        {
+            "result": 0,
+            "comment": "Nodes linked!",
+            "data": {
+                "id": "carlos3@mulesol.es",
+                "roles": [
+                    {
+                        "id": "root",
+                        "topic_name": "roles",
+                        "hook_name": "users"
+                    }
+                ],
+                "disabled": false,
+                "properties": {},
+                "_geometry": {}
+            }
+        }
+}
