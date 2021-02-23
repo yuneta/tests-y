@@ -1,0 +1,1869 @@
+#List hierarchical tree (topic with self-link). Webix option return dict-list else return list of dicts. Always with __path__
+#- jtree                        [topic_name='?'] [node_id='?'] [hook='?'] [rename_hook='?'] [filter='?'] [options='?']. List hierarchical tree (topic
+#    - topic_name       Type:string  , Desc:Topic name                         , Flag:
+#    - node_id          Type:string  , Desc:Node id                            , Flag:
+#    - hook             Type:string  , Desc:Hook to build the tree             , Flag:
+#    - rename_hook      Type:string  , Desc:Rename the hook field in the response (only with webix option), Flag:
+#    - filter           Type:json    , Desc:Filter to childs                   , Flag:
+#    - options          Type:json    , Desc:Options: 'webix','expand_childs' refs, hook_refs, fkey_refs, only_id, hook_only_id, fkey_only_id, list_dic
+
+# command = jtree SIN options
+
+{
+    "command": "command-yuno id=1600 service=treedb_geodb2 command=jtree topic_name=groups hook=groups",
+    "_kw": {},
+    "ignore_fail": true,
+    "filter": ["result", "comment", "data"],
+    "without_metadata": true,
+    "without_private": true,
+    "response":
+        {
+            "result": 0,
+            "comment": "",
+            "data":  [
+                {
+                    "id": "Mulesol",
+                    "groups": [
+                        {
+                            "id": "Departamento Administración",
+                            "topic_name": "groups"
+                        },
+                        {
+                            "id": "Departamento Desarrollo",
+                            "topic_name": "groups"
+                        },
+                        {
+                            "id": "Departamento IT",
+                            "topic_name": "groups"
+                        }
+                    ],
+                    "group_top": [],
+                    "description": "Soluciones Multimedia Emilio",
+                    "icon": "",
+                    "properties": {},
+                    "disabled": false,
+                    "devices": [],
+                    "_geometry": {
+                        "x": 420,
+                        "y": 60,
+                        "width": 110,
+                        "height": 80,
+                        "__origin__": "me-908a32e4-5d24-4a92-9f09-2b5b8d52e406"
+                    },
+                    "__path__": "Mulesol"
+                },
+                {
+                    "id": "Departamento Administración",
+                    "groups": [],
+                    "group_top": [
+                        {
+                            "id": "Mulesol",
+                            "topic_name": "groups",
+                            "hook_name": "groups"
+                        }
+                    ],
+                    "description": "",
+                    "icon": "",
+                    "properties": {},
+                    "disabled": false,
+                    "devices": [],
+                    "_geometry": {
+                        "x": 1050,
+                        "y": 60,
+                        "width": 110,
+                        "height": 80,
+                        "__origin__": "me-908a32e4-5d24-4a92-9f09-2b5b8d52e406"
+                    },
+                    "__path__": "Mulesol`Departamento Administración"
+                },
+                {
+                    "id": "Departamento Desarrollo",
+                    "groups": [],
+                    "group_top": [
+                        {
+                            "id": "Mulesol",
+                            "topic_name": "groups",
+                            "hook_name": "groups"
+                        }
+                    ],
+                    "description": "format c:",
+                    "icon": "",
+                    "properties": {},
+                    "disabled": false,
+                    "devices": [
+                        {
+                            "id": "5031fea483b3ad29",
+                            "topic_name": "devices"
+                        },
+                        {
+                            "id": "b425800bde479a6f",
+                            "topic_name": "devices"
+                        },
+                        {
+                            "id": "0359339075946142",
+                            "topic_name": "devices"
+                        }
+                    ],
+                    "_geometry": {
+                        "x": 840,
+                        "y": 60,
+                        "width": 110,
+                        "height": 80,
+                        "__origin__": "me-908a32e4-5d24-4a92-9f09-2b5b8d52e406"
+                    },
+                    "__path__": "Mulesol`Departamento Desarrollo"
+                },
+                {
+                    "id": "Departamento IT",
+                    "groups": [],
+                    "group_top": [
+                        {
+                            "id": "Mulesol",
+                            "topic_name": "groups",
+                            "hook_name": "groups"
+                        }
+                    ],
+                    "description": "",
+                    "icon": "",
+                    "properties": {},
+                    "disabled": false,
+                    "devices": [
+                        {
+                            "id": "337A16",
+                            "topic_name": "devices"
+                        },
+                        {
+                            "id": "1C8BE79",
+                            "topic_name": "devices"
+                        },
+                        {
+                            "id": "1EBE4D0",
+                            "topic_name": "devices"
+                        }
+                    ],
+                    "_geometry": {
+                        "x": 630,
+                        "y": 60,
+                        "width": 110,
+                        "height": 80,
+                        "__origin__": "me-908a32e4-5d24-4a92-9f09-2b5b8d52e406"
+                    },
+                    "__path__": "Mulesol`Departamento IT"
+                }
+            ]
+        }
+}
+
+# command = jtree options:"webix"
+
+{
+    "command": "command-yuno id=1600 service=treedb_geodb2 command=jtree topic_name=groups hook=groups options={\"webix\":true}",
+    "_kw": {},
+    "ignore_fail": true,
+    "filter": ["result", "comment", "data"],
+    "without_metadata": true,
+    "without_private": true,
+    "response":
+        {
+            "result": 0,
+            "comment": "",
+            "data": {
+                "id": "Mulesol",
+                "group_top": [],
+                "description": "Soluciones Multimedia Emilio",
+                "icon": "",
+                "properties": {},
+                "disabled": false,
+                "devices": [],
+                "_geometry": {
+                    "x": 420,
+                    "y": 60,
+                    "width": 110,
+                    "height": 80,
+                    "__origin__": "me-908a32e4-5d24-4a92-9f09-2b5b8d52e406"
+                },
+                "groups": [
+                    {
+                        "id": "Departamento Administración",
+                        "group_top": [
+                            {
+                                "id": "Mulesol",
+                                "topic_name": "groups",
+                                "hook_name": "groups"
+                            }
+                        ],
+                        "description": "",
+                        "icon": "",
+                        "properties": {},
+                        "disabled": false,
+                        "devices": [],
+                        "_geometry": {
+                            "x": 1050,
+                            "y": 60,
+                            "width": 110,
+                            "height": 80,
+                            "__origin__": "me-908a32e4-5d24-4a92-9f09-2b5b8d52e406"
+                        },
+                        "groups": [],
+                        "__path__": "Mulesol`Departamento Administración"
+                    },
+                    {
+                        "id": "Departamento Desarrollo",
+                        "group_top": [
+                            {
+                                "id": "Mulesol",
+                                "topic_name": "groups",
+                                "hook_name": "groups"
+                            }
+                        ],
+                        "description": "format c:",
+                        "icon": "",
+                        "properties": {},
+                        "disabled": false,
+                        "devices": [
+                            {
+                                "id": "5031fea483b3ad29",
+                                "topic_name": "devices"
+                            },
+                            {
+                                "id": "b425800bde479a6f",
+                                "topic_name": "devices"
+                            },
+                            {
+                                "id": "0359339075946142",
+                                "topic_name": "devices"
+                            }
+                        ],
+                        "_geometry": {
+                            "x": 840,
+                            "y": 60,
+                            "width": 110,
+                            "height": 80,
+                            "__origin__": "me-908a32e4-5d24-4a92-9f09-2b5b8d52e406"
+                        },
+                        "groups": [],
+                        "__path__": "Mulesol`Departamento Desarrollo"
+                    },
+                    {
+                        "id": "Departamento IT",
+                        "group_top": [
+                            {
+                                "id": "Mulesol",
+                                "topic_name": "groups",
+                                "hook_name": "groups"
+                            }
+                        ],
+                        "description": "",
+                        "icon": "",
+                        "properties": {},
+                        "disabled": false,
+                        "devices": [
+                            {
+                                "id": "337A16",
+                                "topic_name": "devices"
+                            },
+                            {
+                                "id": "1C8BE79",
+                                "topic_name": "devices"
+                            },
+                            {
+                                "id": "1EBE4D0",
+                                "topic_name": "devices"
+                            }
+                        ],
+                        "_geometry": {
+                            "x": 630,
+                            "y": 60,
+                            "width": 110,
+                            "height": 80,
+                            "__origin__": "me-908a32e4-5d24-4a92-9f09-2b5b8d52e406"
+                        },
+                        "groups": [],
+                        "__path__": "Mulesol`Departamento IT"
+                    }
+                ],
+                "__path__": "Mulesol"
+            }
+        }
+}
+# command = jtree options:"refs"
+{
+    "command": "command-yuno id=1600 service=treedb_geodb2 command=jtree topic_name=groups hook=groups options={\"refs\":true}",
+    "_kw": {},
+    "ignore_fail": true,
+    "filter": ["result", "comment", "data"],
+    "without_metadata": true,
+    "without_private": true,
+    "response":
+        {
+            "result": 0,
+            "comment": "",
+            "data":  [
+                {
+                    "id": "Mulesol",
+                    "groups": [
+                        "groups^Departamento Administración",
+                        "groups^Departamento Desarrollo",
+                        "groups^Departamento IT"
+                    ],
+                    "group_top": [],
+                    "description": "Soluciones Multimedia Emilio",
+                    "icon": "",
+                    "properties": {},
+                    "disabled": false,
+                    "devices": [],
+                    "_geometry": {
+                        "x": 420,
+                        "y": 60,
+                        "width": 110,
+                        "height": 80,
+                        "__origin__": "me-908a32e4-5d24-4a92-9f09-2b5b8d52e406"
+                    },
+                    "__path__": "Mulesol"
+                },
+                {
+                    "id": "Departamento Administración",
+                    "groups": [],
+                    "group_top": [
+                        "groups^Mulesol^groups"
+                    ],
+                    "description": "",
+                    "icon": "",
+                    "properties": {},
+                    "disabled": false,
+                    "devices": [],
+                    "_geometry": {
+                        "x": 1050,
+                        "y": 60,
+                        "width": 110,
+                        "height": 80,
+                        "__origin__": "me-908a32e4-5d24-4a92-9f09-2b5b8d52e406"
+                    },
+                    "__path__": "Mulesol`Departamento Administración"
+                },
+                {
+                    "id": "Departamento Desarrollo",
+                    "groups": [],
+                    "group_top": [
+                        "groups^Mulesol^groups"
+                    ],
+                    "description": "format c:",
+                    "icon": "",
+                    "properties": {},
+                    "disabled": false,
+                    "devices": [
+                        "devices^5031fea483b3ad29",
+                        "devices^b425800bde479a6f",
+                        "devices^0359339075946142"
+                    ],
+                    "_geometry": {
+                        "x": 840,
+                        "y": 60,
+                        "width": 110,
+                        "height": 80,
+                        "__origin__": "me-908a32e4-5d24-4a92-9f09-2b5b8d52e406"
+                    },
+                    "__path__": "Mulesol`Departamento Desarrollo"
+                },
+                {
+                    "id": "Departamento IT",
+                    "groups": [],
+                    "group_top": [
+                        "groups^Mulesol^groups"
+                    ],
+                    "description": "",
+                    "icon": "",
+                    "properties": {},
+                    "disabled": false,
+                    "devices": [
+                        "devices^337A16",
+                        "devices^1C8BE79",
+                        "devices^1EBE4D0"
+                    ],
+                    "_geometry": {
+                        "x": 630,
+                        "y": 60,
+                        "width": 110,
+                        "height": 80,
+                        "__origin__": "me-908a32e4-5d24-4a92-9f09-2b5b8d52e406"
+                    },
+                    "__path__": "Mulesol`Departamento IT"
+                }
+            ]
+        }
+}
+
+# command = jtree options:"hook_refs"
+
+{
+    "command": "command-yuno id=1600 service=treedb_geodb2 command=jtree topic_name=groups hook=groups options={\"hook_refs\":true}",
+    "_kw": {},
+    "ignore_fail": true,
+    "filter": ["result", "comment", "data"],
+    "without_metadata": true,
+    "without_private": true,
+    "response":
+        {
+            "result": 0,
+            "comment": "",
+            "data": [
+                {
+                    "id": "Mulesol",
+                    "groups": [
+                        "groups^Departamento Administración",
+                        "groups^Departamento Desarrollo",
+                        "groups^Departamento IT"
+                    ],
+                    "group_top": [],
+                    "description": "Soluciones Multimedia Emilio",
+                    "icon": "",
+                    "properties": {},
+                    "disabled": false,
+                    "devices": [],
+                    "_geometry": {
+                        "x": 420,
+                        "y": 60,
+                        "width": 110,
+                        "height": 80,
+                        "__origin__": "me-908a32e4-5d24-4a92-9f09-2b5b8d52e406"
+                    },
+                    "__path__": "Mulesol"
+                },
+                {
+                    "id": "Departamento Administración",
+                    "groups": [],
+                    "group_top": [
+                        {
+                            "id": "Mulesol",
+                            "topic_name": "groups",
+                            "hook_name": "groups"
+                        }
+                    ],
+                    "description": "",
+                    "icon": "",
+                    "properties": {},
+                    "disabled": false,
+                    "devices": [],
+                    "_geometry": {
+                        "x": 1050,
+                        "y": 60,
+                        "width": 110,
+                        "height": 80,
+                        "__origin__": "me-908a32e4-5d24-4a92-9f09-2b5b8d52e406"
+                    },
+                    "__path__": "Mulesol`Departamento Administración"
+                },
+                {
+                    "id": "Departamento Desarrollo",
+                    "groups": [],
+                    "group_top": [
+                        {
+                            "id": "Mulesol",
+                            "topic_name": "groups",
+                            "hook_name": "groups"
+                        }
+                    ],
+                    "description": "format c:",
+                    "icon": "",
+                    "properties": {},
+                    "disabled": false,
+                    "devices": [
+                        "devices^5031fea483b3ad29",
+                        "devices^b425800bde479a6f",
+                        "devices^0359339075946142"
+                    ],
+                    "_geometry": {
+                        "x": 840,
+                        "y": 60,
+                        "width": 110,
+                        "height": 80,
+                        "__origin__": "me-908a32e4-5d24-4a92-9f09-2b5b8d52e406"
+                    },
+                    "__path__": "Mulesol`Departamento Desarrollo"
+                },
+                {
+                    "id": "Departamento IT",
+                    "groups": [],
+                    "group_top": [
+                        {
+                            "id": "Mulesol",
+                            "topic_name": "groups",
+                            "hook_name": "groups"
+                        }
+                    ],
+                    "description": "",
+                    "icon": "",
+                    "properties": {},
+                    "disabled": false,
+                    "devices": [
+                        "devices^337A16",
+                        "devices^1C8BE79",
+                        "devices^1EBE4D0"
+                    ],
+                    "_geometry": {
+                        "x": 630,
+                        "y": 60,
+                        "width": 110,
+                        "height": 80,
+                        "__origin__": "me-908a32e4-5d24-4a92-9f09-2b5b8d52e406"
+                    },
+                    "__path__": "Mulesol`Departamento IT"
+                }
+            ]
+
+
+        }
+}
+
+# command = jtree options:"fkey_refs"
+
+{
+    "command": "command-yuno id=1600 service=treedb_geodb2 command=jtree topic_name=groups hook=groups options={\"fkey_refs\":true}",
+    "_kw": {},
+    "ignore_fail": true,
+    "filter": ["result", "comment", "data"],
+    "without_metadata": true,
+    "without_private": true,
+    "response":
+        {
+            "result": 0,
+            "comment": "",
+            "data": [
+                {
+                    "id": "Mulesol",
+                    "groups": [
+                        {
+                            "id": "Departamento Administración",
+                            "topic_name": "groups"
+                        },
+                        {
+                            "id": "Departamento Desarrollo",
+                            "topic_name": "groups"
+                        },
+                        {
+                            "id": "Departamento IT",
+                            "topic_name": "groups"
+                        }
+                    ],
+                    "group_top": [],
+                    "description": "Soluciones Multimedia Emilio",
+                    "icon": "",
+                    "properties": {},
+                    "disabled": false,
+                    "devices": [],
+                    "_geometry": {
+                        "x": 420,
+                        "y": 60,
+                        "width": 110,
+                        "height": 80,
+                        "__origin__": "me-908a32e4-5d24-4a92-9f09-2b5b8d52e406"
+                    },
+                    "__path__": "Mulesol"
+                },
+                {
+                    "id": "Departamento Administración",
+                    "groups": [],
+                    "group_top": [
+                        "groups^Mulesol^groups"
+                    ],
+                    "description": "",
+                    "icon": "",
+                    "properties": {},
+                    "disabled": false,
+                    "devices": [],
+                    "_geometry": {
+                        "x": 1050,
+                        "y": 60,
+                        "width": 110,
+                        "height": 80,
+                        "__origin__": "me-908a32e4-5d24-4a92-9f09-2b5b8d52e406"
+                    },
+                    "__path__": "Mulesol`Departamento Administración"
+                },
+                {
+                    "id": "Departamento Desarrollo",
+                    "groups": [],
+                    "group_top": [
+                        "groups^Mulesol^groups"
+                    ],
+                    "description": "format c:",
+                    "icon": "",
+                    "properties": {},
+                    "disabled": false,
+                    "devices": [
+                        {
+                            "id": "5031fea483b3ad29",
+                            "topic_name": "devices"
+                        },
+                        {
+                            "id": "b425800bde479a6f",
+                            "topic_name": "devices"
+                        },
+                        {
+                            "id": "0359339075946142",
+                            "topic_name": "devices"
+                        }
+                    ],
+                    "_geometry": {
+                        "x": 840,
+                        "y": 60,
+                        "width": 110,
+                        "height": 80,
+                        "__origin__": "me-908a32e4-5d24-4a92-9f09-2b5b8d52e406"
+                    },
+                    "__path__": "Mulesol`Departamento Desarrollo"
+                },
+                {
+                    "id": "Departamento IT",
+                    "groups": [],
+                    "group_top": [
+                        "groups^Mulesol^groups"
+                    ],
+                    "description": "",
+                    "icon": "",
+                    "properties": {},
+                    "disabled": false,
+                    "devices": [
+                        {
+                            "id": "337A16",
+                            "topic_name": "devices"
+                        },
+                        {
+                            "id": "1C8BE79",
+                            "topic_name": "devices"
+                        },
+                        {
+                            "id": "1EBE4D0",
+                            "topic_name": "devices"
+                        }
+                    ],
+                    "_geometry": {
+                        "x": 630,
+                        "y": 60,
+                        "width": 110,
+                        "height": 80,
+                        "__origin__": "me-908a32e4-5d24-4a92-9f09-2b5b8d52e406"
+                    },
+                    "__path__": "Mulesol`Departamento IT"
+                }
+            ]
+        }
+}
+# command = jtree options:"only_id"
+
+{
+    "command": "command-yuno id=1600 service=treedb_geodb2 command=jtree topic_name=groups hook=groups options={\"only_id\":true}",
+    "_kw": {},
+    "ignore_fail": true,
+    "filter": ["result", "comment", "data"],
+    "without_metadata": true,
+    "without_private": true,
+    "response":
+        {
+            "result": 0,
+            "comment": "",
+            "data": [
+                {
+                    "id": "Mulesol",
+                    "groups": [
+                        "Departamento Administración",
+                        "Departamento Desarrollo",
+                        "Departamento IT"
+                    ],
+                    "group_top": [],
+                    "description": "Soluciones Multimedia Emilio",
+                    "icon": "",
+                    "properties": {},
+                    "disabled": false,
+                    "devices": [],
+                    "_geometry": {
+                        "x": 420,
+                        "y": 60,
+                        "width": 110,
+                        "height": 80,
+                        "__origin__": "me-908a32e4-5d24-4a92-9f09-2b5b8d52e406"
+                    },
+                    "__path__": "Mulesol"
+                },
+                {
+                    "id": "Departamento Administración",
+                    "groups": [],
+                    "group_top": [
+                        "Mulesol"
+                    ],
+                    "description": "",
+                    "icon": "",
+                    "properties": {},
+                    "disabled": false,
+                    "devices": [],
+                    "_geometry": {
+                        "x": 1050,
+                        "y": 60,
+                        "width": 110,
+                        "height": 80,
+                        "__origin__": "me-908a32e4-5d24-4a92-9f09-2b5b8d52e406"
+                    },
+                    "__path__": "Mulesol`Departamento Administración"
+                },
+                {
+                    "id": "Departamento Desarrollo",
+                    "groups": [],
+                    "group_top": [
+                        "Mulesol"
+                    ],
+                    "description": "format c:",
+                    "icon": "",
+                    "properties": {},
+                    "disabled": false,
+                    "devices": [
+                        "5031fea483b3ad29",
+                        "b425800bde479a6f",
+                        "0359339075946142"
+                    ],
+                    "_geometry": {
+                        "x": 840,
+                        "y": 60,
+                        "width": 110,
+                        "height": 80,
+                        "__origin__": "me-908a32e4-5d24-4a92-9f09-2b5b8d52e406"
+                    },
+                    "__path__": "Mulesol`Departamento Desarrollo"
+                },
+                {
+                    "id": "Departamento IT",
+                    "groups": [],
+                    "group_top": [
+                        "Mulesol"
+                    ],
+                    "description": "",
+                    "icon": "",
+                    "properties": {},
+                    "disabled": false,
+                    "devices": [
+                        "337A16",
+                        "1C8BE79",
+                        "1EBE4D0"
+                    ],
+                    "_geometry": {
+                        "x": 630,
+                        "y": 60,
+                        "width": 110,
+                        "height": 80,
+                        "__origin__": "me-908a32e4-5d24-4a92-9f09-2b5b8d52e406"
+                    },
+                    "__path__": "Mulesol`Departamento IT"
+                }
+            ]
+        }
+}
+
+# command = jtree options:"hook_only_id"
+
+{
+    "command": "command-yuno id=1600 service=treedb_geodb2 command=jtree topic_name=groups hook=groups options={\"hook_refs\":true}",
+    "_kw": {},
+    "ignore_fail": true,
+    "filter": ["result", "comment", "data"],
+    "without_metadata": true,
+    "without_private": true,
+    "response":
+        {
+            "result": 0,
+            "comment": "",
+            "data": [
+                {
+                    "id": "Mulesol",
+                    "groups": [
+                        "groups^Departamento Administración",
+                        "groups^Departamento Desarrollo",
+                        "groups^Departamento IT"
+                    ],
+                    "group_top": [],
+                    "description": "Soluciones Multimedia Emilio",
+                    "icon": "",
+                    "properties": {},
+                    "disabled": false,
+                    "devices": [],
+                    "_geometry": {
+                        "x": 420,
+                        "y": 60,
+                        "width": 110,
+                        "height": 80,
+                        "__origin__": "me-908a32e4-5d24-4a92-9f09-2b5b8d52e406"
+                    },
+                    "__path__": "Mulesol"
+                },
+                {
+                    "id": "Departamento Administración",
+                    "groups": [],
+                    "group_top": [
+                        {
+                            "id": "Mulesol",
+                            "topic_name": "groups",
+                            "hook_name": "groups"
+                        }
+                    ],
+                    "description": "",
+                    "icon": "",
+                    "properties": {},
+                    "disabled": false,
+                    "devices": [],
+                    "_geometry": {
+                        "x": 1050,
+                        "y": 60,
+                        "width": 110,
+                        "height": 80,
+                        "__origin__": "me-908a32e4-5d24-4a92-9f09-2b5b8d52e406"
+                    },
+                    "__path__": "Mulesol`Departamento Administración"
+                },
+                {
+                    "id": "Departamento Desarrollo",
+                    "groups": [],
+                    "group_top": [
+                        {
+                            "id": "Mulesol",
+                            "topic_name": "groups",
+                            "hook_name": "groups"
+                        }
+                    ],
+                    "description": "format c:",
+                    "icon": "",
+                    "properties": {},
+                    "disabled": false,
+                    "devices": [
+                        "devices^5031fea483b3ad29",
+                        "devices^b425800bde479a6f",
+                        "devices^0359339075946142"
+                    ],
+                    "_geometry": {
+                        "x": 840,
+                        "y": 60,
+                        "width": 110,
+                        "height": 80,
+                        "__origin__": "me-908a32e4-5d24-4a92-9f09-2b5b8d52e406"
+                    },
+                    "__path__": "Mulesol`Departamento Desarrollo"
+                },
+                {
+                    "id": "Departamento IT",
+                    "groups": [],
+                    "group_top": [
+                        {
+                            "id": "Mulesol",
+                            "topic_name": "groups",
+                            "hook_name": "groups"
+                        }
+                    ],
+                    "description": "",
+                    "icon": "",
+                    "properties": {},
+                    "disabled": false,
+                    "devices": [
+                        "devices^337A16",
+                        "devices^1C8BE79",
+                        "devices^1EBE4D0"
+                    ],
+                    "_geometry": {
+                        "x": 630,
+                        "y": 60,
+                        "width": 110,
+                        "height": 80,
+                        "__origin__": "me-908a32e4-5d24-4a92-9f09-2b5b8d52e406"
+                    },
+                    "__path__": "Mulesol`Departamento IT"
+                }
+            ]
+
+
+        }
+}
+
+# command = jtree options:"fkey_only_id"
+
+{
+    "command": "command-yuno id=1600 service=treedb_geodb2 command=jtree topic_name=groups hook=groups options={\"fkey_only_id\":true}",
+    "_kw": {},
+    "ignore_fail": true,
+    "filter": ["result", "comment", "data"],
+    "without_metadata": true,
+    "without_private": true,
+    "response":
+        {
+            "result": 0,
+            "comment": "",
+            "data": [
+                {
+                    "id": "Mulesol",
+                    "groups": [
+                        {
+                            "id": "Departamento Administración",
+                            "topic_name": "groups"
+                        },
+                        {
+                            "id": "Departamento Desarrollo",
+                            "topic_name": "groups"
+                        },
+                        {
+                            "id": "Departamento IT",
+                            "topic_name": "groups"
+                        }
+                    ],
+                    "group_top": [],
+                    "description": "Soluciones Multimedia Emilio",
+                    "icon": "",
+                    "properties": {},
+                    "disabled": false,
+                    "devices": [],
+                    "_geometry": {
+                        "x": 420,
+                        "y": 60,
+                        "width": 110,
+                        "height": 80,
+                        "__origin__": "me-908a32e4-5d24-4a92-9f09-2b5b8d52e406"
+                    },
+                    "__path__": "Mulesol"
+                },
+                {
+                    "id": "Departamento Administración",
+                    "groups": [],
+                    "group_top": [
+                        "Mulesol"
+                    ],
+                    "description": "",
+                    "icon": "",
+                    "properties": {},
+                    "disabled": false,
+                    "devices": [],
+                    "_geometry": {
+                        "x": 1050,
+                        "y": 60,
+                        "width": 110,
+                        "height": 80,
+                        "__origin__": "me-908a32e4-5d24-4a92-9f09-2b5b8d52e406"
+                    },
+                    "__path__": "Mulesol`Departamento Administración"
+                },
+                {
+                    "id": "Departamento Desarrollo",
+                    "groups": [],
+                    "group_top": [
+                        "Mulesol"
+                    ],
+                    "description": "format c:",
+                    "icon": "",
+                    "properties": {},
+                    "disabled": false,
+                    "devices": [
+                        {
+                            "id": "5031fea483b3ad29",
+                            "topic_name": "devices"
+                        },
+                        {
+                            "id": "b425800bde479a6f",
+                            "topic_name": "devices"
+                        },
+                        {
+                            "id": "0359339075946142",
+                            "topic_name": "devices"
+                        }
+                    ],
+                    "_geometry": {
+                        "x": 840,
+                        "y": 60,
+                        "width": 110,
+                        "height": 80,
+                        "__origin__": "me-908a32e4-5d24-4a92-9f09-2b5b8d52e406"
+                    },
+                    "__path__": "Mulesol`Departamento Desarrollo"
+                },
+                {
+                    "id": "Departamento IT",
+                    "groups": [],
+                    "group_top": [
+                        "Mulesol"
+                    ],
+                    "description": "",
+                    "icon": "",
+                    "properties": {},
+                    "disabled": false,
+                    "devices": [
+                        {
+                            "id": "337A16",
+                            "topic_name": "devices"
+                        },
+                        {
+                            "id": "1C8BE79",
+                            "topic_name": "devices"
+                        },
+                        {
+                            "id": "1EBE4D0",
+                            "topic_name": "devices"
+                        }
+                    ],
+                    "_geometry": {
+                        "x": 630,
+                        "y": 60,
+                        "width": 110,
+                        "height": 80,
+                        "__origin__": "me-908a32e4-5d24-4a92-9f09-2b5b8d52e406"
+                    },
+                    "__path__": "Mulesol`Departamento IT"
+                }
+            ]
+        }
+}
+
+# command = jtree options:"list_dict"
+
+{
+    "command": "command-yuno id=1600 service=treedb_geodb2 command=jtree topic_name=groups hook=groups options={\"list_dict\":true}",
+    "_kw": {},
+    "ignore_fail": true,
+    "filter": ["result", "comment", "data"],
+    "without_metadata": true,
+    "without_private": true,
+    "response":
+        {
+            "result": 0,
+            "comment": "",
+            "data":  [
+                {
+                    "id": "Mulesol",
+                    "groups": [
+                        {
+                            "id": "Departamento Administración",
+                            "topic_name": "groups"
+                        },
+                        {
+                            "id": "Departamento Desarrollo",
+                            "topic_name": "groups"
+                        },
+                        {
+                            "id": "Departamento IT",
+                            "topic_name": "groups"
+                        }
+                    ],
+                    "group_top": [],
+                    "description": "Soluciones Multimedia Emilio",
+                    "icon": "",
+                    "properties": {},
+                    "disabled": false,
+                    "devices": [],
+                    "_geometry": {
+                        "x": 420,
+                        "y": 60,
+                        "width": 110,
+                        "height": 80,
+                        "__origin__": "me-908a32e4-5d24-4a92-9f09-2b5b8d52e406"
+                    },
+                    "__path__": "Mulesol"
+                },
+                {
+                    "id": "Departamento Administración",
+                    "groups": [],
+                    "group_top": [
+                        {
+                            "id": "Mulesol",
+                            "topic_name": "groups",
+                            "hook_name": "groups"
+                        }
+                    ],
+                    "description": "",
+                    "icon": "",
+                    "properties": {},
+                    "disabled": false,
+                    "devices": [],
+                    "_geometry": {
+                        "x": 1050,
+                        "y": 60,
+                        "width": 110,
+                        "height": 80,
+                        "__origin__": "me-908a32e4-5d24-4a92-9f09-2b5b8d52e406"
+                    },
+                    "__path__": "Mulesol`Departamento Administración"
+                },
+                {
+                    "id": "Departamento Desarrollo",
+                    "groups": [],
+                    "group_top": [
+                        {
+                            "id": "Mulesol",
+                            "topic_name": "groups",
+                            "hook_name": "groups"
+                        }
+                    ],
+                    "description": "format c:",
+                    "icon": "",
+                    "properties": {},
+                    "disabled": false,
+                    "devices": [
+                        {
+                            "id": "5031fea483b3ad29",
+                            "topic_name": "devices"
+                        },
+                        {
+                            "id": "b425800bde479a6f",
+                            "topic_name": "devices"
+                        },
+                        {
+                            "id": "0359339075946142",
+                            "topic_name": "devices"
+                        }
+                    ],
+                    "_geometry": {
+                        "x": 840,
+                        "y": 60,
+                        "width": 110,
+                        "height": 80,
+                        "__origin__": "me-908a32e4-5d24-4a92-9f09-2b5b8d52e406"
+                    },
+                    "__path__": "Mulesol`Departamento Desarrollo"
+                },
+                {
+                    "id": "Departamento IT",
+                    "groups": [],
+                    "group_top": [
+                        {
+                            "id": "Mulesol",
+                            "topic_name": "groups",
+                            "hook_name": "groups"
+                        }
+                    ],
+                    "description": "",
+                    "icon": "",
+                    "properties": {},
+                    "disabled": false,
+                    "devices": [
+                        {
+                            "id": "337A16",
+                            "topic_name": "devices"
+                        },
+                        {
+                            "id": "1C8BE79",
+                            "topic_name": "devices"
+                        },
+                        {
+                            "id": "1EBE4D0",
+                            "topic_name": "devices"
+                        }
+                    ],
+                    "_geometry": {
+                        "x": 630,
+                        "y": 60,
+                        "width": 110,
+                        "height": 80,
+                        "__origin__": "me-908a32e4-5d24-4a92-9f09-2b5b8d52e406"
+                    },
+                    "__path__": "Mulesol`Departamento IT"
+                }
+            ]
+        }
+}
+
+# command = jtree options:"hook_list_dict"
+
+{
+    "command": "command-yuno id=1600 service=treedb_geodb2 command=jtree topic_name=groups hook=groups options={\"hook_list_dict\":true}",
+    "_kw": {},
+    "ignore_fail": true,
+    "filter": ["result", "comment", "data"],
+    "without_metadata": true,
+    "without_private": true,
+    "response":
+        {
+            "result": 0,
+            "comment": "",
+            "data": [
+                {
+                    "id": "Mulesol",
+                    "groups": [
+                        {
+                            "id": "Departamento Administración",
+                            "topic_name": "groups"
+                        },
+                        {
+                            "id": "Departamento Desarrollo",
+                            "topic_name": "groups"
+                        },
+                        {
+                            "id": "Departamento IT",
+                            "topic_name": "groups"
+                        }
+                    ],
+                    "group_top": [],
+                    "description": "Soluciones Multimedia Emilio",
+                    "icon": "",
+                    "properties": {},
+                    "disabled": false,
+                    "devices": [],
+                    "_geometry": {
+                        "x": 420,
+                        "y": 60,
+                        "width": 110,
+                        "height": 80,
+                        "__origin__": "me-908a32e4-5d24-4a92-9f09-2b5b8d52e406"
+                    },
+                    "__path__": "Mulesol"
+                },
+                {
+                    "id": "Departamento Administración",
+                    "groups": [],
+                    "group_top": [
+                        {
+                            "id": "Mulesol",
+                            "topic_name": "groups",
+                            "hook_name": "groups"
+                        }
+                    ],
+                    "description": "",
+                    "icon": "",
+                    "properties": {},
+                    "disabled": false,
+                    "devices": [],
+                    "_geometry": {
+                        "x": 1050,
+                        "y": 60,
+                        "width": 110,
+                        "height": 80,
+                        "__origin__": "me-908a32e4-5d24-4a92-9f09-2b5b8d52e406"
+                    },
+                    "__path__": "Mulesol`Departamento Administración"
+                },
+                {
+                    "id": "Departamento Desarrollo",
+                    "groups": [],
+                    "group_top": [
+                        {
+                            "id": "Mulesol",
+                            "topic_name": "groups",
+                            "hook_name": "groups"
+                        }
+                    ],
+                    "description": "format c:",
+                    "icon": "",
+                    "properties": {},
+                    "disabled": false,
+                    "devices": [
+                        {
+                            "id": "5031fea483b3ad29",
+                            "topic_name": "devices"
+                        },
+                        {
+                            "id": "b425800bde479a6f",
+                            "topic_name": "devices"
+                        },
+                        {
+                            "id": "0359339075946142",
+                            "topic_name": "devices"
+                        }
+                    ],
+                    "_geometry": {
+                        "x": 840,
+                        "y": 60,
+                        "width": 110,
+                        "height": 80,
+                        "__origin__": "me-908a32e4-5d24-4a92-9f09-2b5b8d52e406"
+                    },
+                    "__path__": "Mulesol`Departamento Desarrollo"
+                },
+                {
+                    "id": "Departamento IT",
+                    "groups": [],
+                    "group_top": [
+                        {
+                            "id": "Mulesol",
+                            "topic_name": "groups",
+                            "hook_name": "groups"
+                        }
+                    ],
+                    "description": "",
+                    "icon": "",
+                    "properties": {},
+                    "disabled": false,
+                    "devices": [
+                        {
+                            "id": "337A16",
+                            "topic_name": "devices"
+                        },
+                        {
+                            "id": "1C8BE79",
+                            "topic_name": "devices"
+                        },
+                        {
+                            "id": "1EBE4D0",
+                            "topic_name": "devices"
+                        }
+                    ],
+                    "_geometry": {
+                        "x": 630,
+                        "y": 60,
+                        "width": 110,
+                        "height": 80,
+                        "__origin__": "me-908a32e4-5d24-4a92-9f09-2b5b8d52e406"
+                    },
+                    "__path__": "Mulesol`Departamento IT"
+                }
+            ]
+        }
+}
+
+# command = jtree options:"fkey_list_dict"
+
+{
+    "command": "command-yuno id=1600 service=treedb_geodb2 command=jtree topic_name=groups hook=groups options={\"fkey_list_dict\":true}",
+    "_kw": {},
+    "ignore_fail": true,
+    "filter": ["result", "comment", "data"],
+    "without_metadata": true,
+    "without_private": true,
+    "response":
+        {
+            "result": 0,
+            "comment": "",
+            "data": [
+                {
+                    "id": "Mulesol",
+                    "groups": [
+                        {
+                            "id": "Departamento Administración",
+                            "topic_name": "groups"
+                        },
+                        {
+                            "id": "Departamento Desarrollo",
+                            "topic_name": "groups"
+                        },
+                        {
+                            "id": "Departamento IT",
+                            "topic_name": "groups"
+                        }
+                    ],
+                    "group_top": [],
+                    "description": "Soluciones Multimedia Emilio",
+                    "icon": "",
+                    "properties": {},
+                    "disabled": false,
+                    "devices": [],
+                    "_geometry": {
+                        "x": 420,
+                        "y": 60,
+                        "width": 110,
+                        "height": 80,
+                        "__origin__": "me-908a32e4-5d24-4a92-9f09-2b5b8d52e406"
+                    },
+                    "__path__": "Mulesol"
+                },
+                {
+                    "id": "Departamento Administración",
+                    "groups": [],
+                    "group_top": [
+                        {
+                            "id": "Mulesol",
+                            "topic_name": "groups",
+                            "hook_name": "groups"
+                        }
+                    ],
+                    "description": "",
+                    "icon": "",
+                    "properties": {},
+                    "disabled": false,
+                    "devices": [],
+                    "_geometry": {
+                        "x": 1050,
+                        "y": 60,
+                        "width": 110,
+                        "height": 80,
+                        "__origin__": "me-908a32e4-5d24-4a92-9f09-2b5b8d52e406"
+                    },
+                    "__path__": "Mulesol`Departamento Administración"
+                },
+                {
+                    "id": "Departamento Desarrollo",
+                    "groups": [],
+                    "group_top": [
+                        {
+                            "id": "Mulesol",
+                            "topic_name": "groups",
+                            "hook_name": "groups"
+                        }
+                    ],
+                    "description": "format c:",
+                    "icon": "",
+                    "properties": {},
+                    "disabled": false,
+                    "devices": [
+                        {
+                            "id": "5031fea483b3ad29",
+                            "topic_name": "devices"
+                        },
+                        {
+                            "id": "b425800bde479a6f",
+                            "topic_name": "devices"
+                        },
+                        {
+                            "id": "0359339075946142",
+                            "topic_name": "devices"
+                        }
+                    ],
+                    "_geometry": {
+                        "x": 840,
+                        "y": 60,
+                        "width": 110,
+                        "height": 80,
+                        "__origin__": "me-908a32e4-5d24-4a92-9f09-2b5b8d52e406"
+                    },
+                    "__path__": "Mulesol`Departamento Desarrollo"
+                },
+                {
+                    "id": "Departamento IT",
+                    "groups": [],
+                    "group_top": [
+                        {
+                            "id": "Mulesol",
+                            "topic_name": "groups",
+                            "hook_name": "groups"
+                        }
+                    ],
+                    "description": "",
+                    "icon": "",
+                    "properties": {},
+                    "disabled": false,
+                    "devices": [
+                        {
+                            "id": "337A16",
+                            "topic_name": "devices"
+                        },
+                        {
+                            "id": "1C8BE79",
+                            "topic_name": "devices"
+                        },
+                        {
+                            "id": "1EBE4D0",
+                            "topic_name": "devices"
+                        }
+                    ],
+                    "_geometry": {
+                        "x": 630,
+                        "y": 60,
+                        "width": 110,
+                        "height": 80,
+                        "__origin__": "me-908a32e4-5d24-4a92-9f09-2b5b8d52e406"
+                    },
+                    "__path__": "Mulesol`Departamento IT"
+                }
+            ]
+        }
+}
+
+# command = jtree options:"size"
+
+{
+    "command": "command-yuno id=1600 service=treedb_geodb2 command=jtree topic_name=groups hook=groups options={\"size\":true}",
+    "_kw": {},
+    "ignore_fail": true,
+    "filter": ["result", "comment", "data"],
+    "without_metadata": true,
+    "without_private": true,
+    "response":
+        {
+            "result": 0,
+            "comment": "",
+            "data": [
+                {
+                    "id": "Mulesol",
+                    "groups": [
+                        {
+                            "size": 3
+                        }
+                    ],
+                    "group_top": [],
+                    "description": "Soluciones Multimedia Emilio",
+                    "icon": "",
+                    "properties": {},
+                    "disabled": false,
+                    "devices": [
+                        {
+                            "size": 0
+                        }
+                    ],
+                    "_geometry": {
+                        "x": 420,
+                        "y": 60,
+                        "width": 110,
+                        "height": 80,
+                        "__origin__": "me-908a32e4-5d24-4a92-9f09-2b5b8d52e406"
+                    },
+                    "__path__": "Mulesol"
+                },
+                {
+                    "id": "Departamento Administración",
+                    "groups": [
+                        {
+                            "size": 0
+                        }
+                    ],
+                    "group_top": [
+                        {
+                            "id": "Mulesol",
+                            "topic_name": "groups",
+                            "hook_name": "groups"
+                        }
+                    ],
+                    "description": "",
+                    "icon": "",
+                    "properties": {},
+                    "disabled": false,
+                    "devices": [
+                        {
+                            "size": 0
+                        }
+                    ],
+                    "_geometry": {
+                        "x": 1050,
+                        "y": 60,
+                        "width": 110,
+                        "height": 80,
+                        "__origin__": "me-908a32e4-5d24-4a92-9f09-2b5b8d52e406"
+                    },
+                    "__path__": "Mulesol`Departamento Administración"
+                },
+                {
+                    "id": "Departamento Desarrollo",
+                    "groups": [
+                        {
+                            "size": 0
+                        }
+                    ],
+                    "group_top": [
+                        {
+                            "id": "Mulesol",
+                            "topic_name": "groups",
+                            "hook_name": "groups"
+                        }
+                    ],
+                    "description": "format c:",
+                    "icon": "",
+                    "properties": {},
+                    "disabled": false,
+                    "devices": [
+                        {
+                            "size": 3
+                        }
+                    ],
+                    "_geometry": {
+                        "x": 840,
+                        "y": 60,
+                        "width": 110,
+                        "height": 80,
+                        "__origin__": "me-908a32e4-5d24-4a92-9f09-2b5b8d52e406"
+                    },
+                    "__path__": "Mulesol`Departamento Desarrollo"
+                },
+                {
+                    "id": "Departamento IT",
+                    "groups": [
+                        {
+                            "size": 0
+                        }
+                    ],
+                    "group_top": [
+                        {
+                            "id": "Mulesol",
+                            "topic_name": "groups",
+                            "hook_name": "groups"
+                        }
+                    ],
+                    "description": "",
+                    "icon": "",
+                    "properties": {},
+                    "disabled": false,
+                    "devices": [
+                        {
+                            "size": 3
+                        }
+                    ],
+                    "_geometry": {
+                        "x": 630,
+                        "y": 60,
+                        "width": 110,
+                        "height": 80,
+                        "__origin__": "me-908a32e4-5d24-4a92-9f09-2b5b8d52e406"
+                    },
+                    "__path__": "Mulesol`Departamento IT"
+                }
+            ]
+        }
+}
+
+# command = jtree options:"hook_size"
+
+{
+    "command": "command-yuno id=1600 service=treedb_geodb2 command=jtree topic_name=groups hook=groups options={\"hook_size\":true}",
+    "_kw": {},
+    "ignore_fail": true,
+    "filter": ["result", "comment", "data"],
+    "without_metadata": true,
+    "without_private": true,
+    "response":
+        {
+            "result": 0,
+            "comment": "",
+            "data": [
+                {
+                    "id": "Mulesol",
+                    "groups": [
+                        {
+                            "size": 3
+                        }
+                    ],
+                    "group_top": [],
+                    "description": "Soluciones Multimedia Emilio",
+                    "icon": "",
+                    "properties": {},
+                    "disabled": false,
+                    "devices": [
+                        {
+                            "size": 0
+                        }
+                    ],
+                    "_geometry": {
+                        "x": 420,
+                        "y": 60,
+                        "width": 110,
+                        "height": 80,
+                        "__origin__": "me-908a32e4-5d24-4a92-9f09-2b5b8d52e406"
+                    },
+                    "__path__": "Mulesol"
+                },
+                {
+                    "id": "Departamento Administración",
+                    "groups": [
+                        {
+                            "size": 0
+                        }
+                    ],
+                    "group_top": [
+                        {
+                            "id": "Mulesol",
+                            "topic_name": "groups",
+                            "hook_name": "groups"
+                        }
+                    ],
+                    "description": "",
+                    "icon": "",
+                    "properties": {},
+                    "disabled": false,
+                    "devices": [
+                        {
+                            "size": 0
+                        }
+                    ],
+                    "_geometry": {
+                        "x": 1050,
+                        "y": 60,
+                        "width": 110,
+                        "height": 80,
+                        "__origin__": "me-908a32e4-5d24-4a92-9f09-2b5b8d52e406"
+                    },
+                    "__path__": "Mulesol`Departamento Administración"
+                },
+                {
+                    "id": "Departamento Desarrollo",
+                    "groups": [
+                        {
+                            "size": 0
+                        }
+                    ],
+                    "group_top": [
+                        {
+                            "id": "Mulesol",
+                            "topic_name": "groups",
+                            "hook_name": "groups"
+                        }
+                    ],
+                    "description": "format c:",
+                    "icon": "",
+                    "properties": {},
+                    "disabled": false,
+                    "devices": [
+                        {
+                            "size": 3
+                        }
+                    ],
+                    "_geometry": {
+                        "x": 840,
+                        "y": 60,
+                        "width": 110,
+                        "height": 80,
+                        "__origin__": "me-908a32e4-5d24-4a92-9f09-2b5b8d52e406"
+                    },
+                    "__path__": "Mulesol`Departamento Desarrollo"
+                },
+                {
+                    "id": "Departamento IT",
+                    "groups": [
+                        {
+                            "size": 0
+                        }
+                    ],
+                    "group_top": [
+                        {
+                            "id": "Mulesol",
+                            "topic_name": "groups",
+                            "hook_name": "groups"
+                        }
+                    ],
+                    "description": "",
+                    "icon": "",
+                    "properties": {},
+                    "disabled": false,
+                    "devices": [
+                        {
+                            "size": 3
+                        }
+                    ],
+                    "_geometry": {
+                        "x": 630,
+                        "y": 60,
+                        "width": 110,
+                        "height": 80,
+                        "__origin__": "me-908a32e4-5d24-4a92-9f09-2b5b8d52e406"
+                    },
+                    "__path__": "Mulesol`Departamento IT"
+                }
+            ]
+        }
+}
+
+# command = jtree rename_hook="DATA" options="webix"
+
+{
+    "command": "command-yuno id=1600 service=treedb_geodb2 command=jtree topic_name=groups hook=groups rename_hook=\"DATA\" options={\"webix\":true}",
+    "_kw": {},
+    "ignore_fail": true,
+    "filter": ["result", "comment", "data"],
+    "without_metadata": true,
+    "without_private": true,
+    "response":
+        {
+            "result": 0,
+            "comment": "",
+            "data": {
+                "id": "Mulesol",
+                "group_top": [],
+                "description": "Soluciones Multimedia Emilio",
+                "icon": "",
+                "properties": {},
+                "disabled": false,
+                "devices": [],
+                "_geometry": {
+                    "x": 420,
+                    "y": 60,
+                    "width": 110,
+                    "height": 80,
+                    "__origin__": "me-908a32e4-5d24-4a92-9f09-2b5b8d52e406"
+                },
+                "DATA": [
+                    {
+                        "id": "Departamento Administración",
+                        "group_top": [
+                            {
+                                "id": "Mulesol",
+                                "topic_name": "groups",
+                                "hook_name": "groups"
+                            }
+                        ],
+                        "description": "",
+                        "icon": "",
+                        "properties": {},
+                        "disabled": false,
+                        "devices": [],
+                        "_geometry": {
+                            "x": 1050,
+                            "y": 60,
+                            "width": 110,
+                            "height": 80,
+                            "__origin__": "me-908a32e4-5d24-4a92-9f09-2b5b8d52e406"
+                        },
+                        "DATA": [],
+                        "__path__": "Mulesol`Departamento Administración"
+                    },
+                    {
+                        "id": "Departamento Desarrollo",
+                        "group_top": [
+                            {
+                                "id": "Mulesol",
+                                "topic_name": "groups",
+                                "hook_name": "groups"
+                            }
+                        ],
+                        "description": "format c:",
+                        "icon": "",
+                        "properties": {},
+                        "disabled": false,
+                        "devices": [
+                            {
+                                "id": "5031fea483b3ad29",
+                                "topic_name": "devices"
+                            },
+                            {
+                                "id": "b425800bde479a6f",
+                                "topic_name": "devices"
+                            },
+                            {
+                                "id": "0359339075946142",
+                                "topic_name": "devices"
+                            }
+                        ],
+                        "_geometry": {
+                            "x": 840,
+                            "y": 60,
+                            "width": 110,
+                            "height": 80,
+                            "__origin__": "me-908a32e4-5d24-4a92-9f09-2b5b8d52e406"
+                        },
+                        "DATA": [],
+                        "__path__": "Mulesol`Departamento Desarrollo"
+                    },
+                    {
+                        "id": "Departamento IT",
+                        "group_top": [
+                            {
+                                "id": "Mulesol",
+                                "topic_name": "groups",
+                                "hook_name": "groups"
+                            }
+                        ],
+                        "description": "",
+                        "icon": "",
+                        "properties": {},
+                        "disabled": false,
+                        "devices": [
+                            {
+                                "id": "337A16",
+                                "topic_name": "devices"
+                            },
+                            {
+                                "id": "1C8BE79",
+                                "topic_name": "devices"
+                            },
+                            {
+                                "id": "1EBE4D0",
+                                "topic_name": "devices"
+                            }
+                        ],
+                        "_geometry": {
+                            "x": 630,
+                            "y": 60,
+                            "width": 110,
+                            "height": 80,
+                            "__origin__": "me-908a32e4-5d24-4a92-9f09-2b5b8d52e406"
+                        },
+                        "DATA": [],
+                        "__path__": "Mulesol`Departamento IT"
+                    }
+                ],
+                "__path__": "Mulesol"
+            }
+        }
+}
