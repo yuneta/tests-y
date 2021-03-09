@@ -131,6 +131,8 @@ PRIVATE int mt_start(hgobj gobj)
 
     gobj_start(priv->dynrule);
     testing(gobj);
+    gobj_stop_services();
+    gobj_stop_childs(gobj_yuno());
 
     return 0;
 }
