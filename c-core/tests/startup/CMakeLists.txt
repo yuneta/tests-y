@@ -55,6 +55,7 @@ TARGET_LINK_LIBRARIES(test_startup
     /yuneta/development/output/lib/libpcre2-8.a
     /yuneta/development/output/lib/libunwind.a
     rt pthread dl lzma
+    uuid
 )
 
 ##############################################
