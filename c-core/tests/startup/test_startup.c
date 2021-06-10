@@ -54,7 +54,7 @@ PRIVATE char variable_config[]= "\
         'daemon_log_handlers': {                                \n\
             'to_file': {                                        \n\
                 'handler_type': 'file',                         \n\
-                'filename_mask': 'yuneta_agent-MM-DD.log'       \n\
+                'filename_mask': 'yuneta_agent-W.log'       \n\
 #^^            },                                                  \n\
 #^^            'to_udp': {                                         \n\
 #^^                'handler_type': 'udp',                          \n\
