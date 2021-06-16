@@ -171,6 +171,7 @@ int main(int argc, char *argv[])
      *---------------------------------*/
     json_incref(jn_yuno);
     hgobj __yuno_gobj__ = gobj_yuno_factory(
+        "",
         realm_id,
         realm_owner,
         realm_role,
