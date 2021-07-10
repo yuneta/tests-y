@@ -7,8 +7,7 @@
  *          Copyright (c) 2018 by Niyamaka.
  *          All Rights Reserved.
  ****************************************************************************/
-#ifndef _C_PEPON_H
-#define _C_PEPON_H 1
+#pragma once
 
 #include <yuneta.h>
 
@@ -29,6 +28,4 @@ PUBLIC GCLASS *gclass_pepon(void);
 
 #ifdef __cplusplus
 }
-#endif
-
 #endif

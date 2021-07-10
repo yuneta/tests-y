@@ -7,8 +7,7 @@
  *          Copyright (c) 2018 by Niyamaka.
  *          All Rights Reserved.
  ****************************************************************************/
-#ifndef _C_TESTON_H
-#define _C_TESTON_H 1
+#pragma once
 
 #include <ytls.h>
 #include <yuneta.h>
@@ -30,6 +29,4 @@ PUBLIC GCLASS *gclass_teston(void);
 
 #ifdef __cplusplus
 }
-#endif
-
 #endif

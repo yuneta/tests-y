@@ -5,8 +5,7 @@
  *          Copyright (c) 2018 by Niyamaka.
  *          All Rights Reserved.
  ****************************************************************************/
-#ifndef _YUNO_PEPON_H
-#define _YUNO_PEPON_H 1
+#pragma once
 
 #include <yuneta.h>
 
@@ -27,7 +26,4 @@ PUBLIC void register_yuno_pepon(void);
 
 #ifdef __cplusplus
 }
-#endif
-
-
 #endif
