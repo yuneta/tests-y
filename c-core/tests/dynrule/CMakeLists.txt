@@ -57,6 +57,7 @@ TARGET_LINK_LIBRARIES(test_dynrule
 
     rt pthread dl lzma
     uuid
+    m
 )
 
 ##############################################
