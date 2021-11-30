@@ -77,6 +77,7 @@ TARGET_LINK_LIBRARIES(pepons
 
     z rt m
     uuid
+    util
 )
 
 ##############################################

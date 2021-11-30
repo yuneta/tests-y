@@ -77,6 +77,7 @@ TARGET_LINK_LIBRARIES(testons
 
     z rt m
     uuid
+    util
 )
 
 ##############################################

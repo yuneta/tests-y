@@ -69,6 +69,7 @@ TARGET_LINK_LIBRARIES(pepon
     lzma        # used by libunwind
     uuid
     m
+    util
 )
 
 ##############################################
