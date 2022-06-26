@@ -137,6 +137,7 @@ int main(int argc, char *argv[])
     const char *realm_name  = kw_get_str(jn_yuno, "realm_name", "", 0);
     const char *realm_env  = kw_get_str(jn_yuno, "realm_env", "", 0);
     const char *yuno_role  = kw_get_str(jn_yuno, "yuno_role", 0, 0);
+    const char *yuno_id  = kw_get_str(jn_yuno, "yuno_id", "", 0);
     const char *yuno_name  = kw_get_str(jn_yuno, "yuno_name", "", 0);
     const char *yuno_tag  = kw_get_str(jn_yuno, "yuno_tag", "", 0);
 
@@ -177,6 +178,7 @@ int main(int argc, char *argv[])
         realm_role,
         realm_name,
         realm_env,
+        yuno_id,
         yuno_name,
         yuno_tag,
         jn_yuno
