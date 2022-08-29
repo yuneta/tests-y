@@ -1,1 +1,1 @@
-./c-core/tests/pepon-teston/pepon/pepon
+./build/c-core/tests/pepon-teston/pepon/pepon
