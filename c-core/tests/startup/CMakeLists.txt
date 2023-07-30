@@ -1,8 +1,8 @@
 ##############################################
 #   CMake
 ##############################################
-project(test_startup C)
 cmake_minimum_required(VERSION 3.0)
+project(test_startup C)
 include(CheckIncludeFiles)
 include(CheckSymbolExists)
 

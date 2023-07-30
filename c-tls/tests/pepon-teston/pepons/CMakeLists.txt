@@ -1,8 +1,8 @@
 ##############################################
 #   CMake
 ##############################################
-project(pepons C)
 cmake_minimum_required(VERSION 3.0)
+project(pepons C)
 include(CheckIncludeFiles)
 include(CheckSymbolExists)
 

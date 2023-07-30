@@ -1,8 +1,8 @@
 ##############################################
 #   CMake
 ##############################################
-project(test_dynrule C)
 cmake_minimum_required(VERSION 3.0)
+project(test_dynrule C)
 include(CheckIncludeFiles)
 include(CheckSymbolExists)
 

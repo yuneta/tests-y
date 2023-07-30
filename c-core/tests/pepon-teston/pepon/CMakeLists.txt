@@ -1,8 +1,8 @@
 ##############################################
 #   CMake
 ##############################################
-project(pepon C)
 cmake_minimum_required(VERSION 3.0)
+project(pepon C)
 include(CheckIncludeFiles)
 include(CheckSymbolExists)
 
