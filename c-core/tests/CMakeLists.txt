@@ -1,7 +1,7 @@
 ##############################################
 #   CMake
 ##############################################
-cmake_minimum_required(VERSION 3.0)
+cmake_minimum_required(VERSION 3.5)
 
 ##############################################
 #   sub-projects
@@ -9,4 +9,3 @@ cmake_minimum_required(VERSION 3.0)
 add_subdirectory(startup)
 add_subdirectory(dynrule)
 add_subdirectory(pepon-teston)
-

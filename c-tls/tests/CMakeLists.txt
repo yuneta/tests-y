@@ -1,10 +1,9 @@
 ##############################################
 #   CMake
 ##############################################
-cmake_minimum_required(VERSION 3.0)
+cmake_minimum_required(VERSION 3.5)
 
 ##############################################
 #   sub-projects
 ##############################################
 add_subdirectory(pepon-teston)
-
